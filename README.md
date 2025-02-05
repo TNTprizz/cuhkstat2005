@@ -1,6 +1,8 @@
 # CUHK STAT2005 Markdowns (Sources)
 
-I generously made the below sources for your reference.
+I generously made the below sources for your reference.  
+Note that you should download the lecture notes from blackboard. Those lecture notes will not be included in this repository as I want to prevent copyright issues.  
+If you (for some reason) cannot find those lecture notes, I won't help, nor do I care.
 
 # Menu
 
@@ -17,6 +19,11 @@ I generously made the below sources for your reference.
  - Making......
 
 Note that the documents might have weird page breakings because of the PDF renderer.
+
+# Appendix
+
+ - [How to install R](./R_Installation/Binary.md)  
+
 
 # To-Do List
 
