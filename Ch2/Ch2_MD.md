@@ -140,7 +140,7 @@ Let me explain what are the above codes doing.
 
 `plot()` simply plots a graph based on the given objects. The `main` parameter states the title of the graph.
 
-`abline()` **a**dds a **b**lue **line** into the graph. `h = 10` stands for a horizontal line at 10.
+`abline()` adds a line into the graph. `h = 10` stands for a horizontal line at 10.
 
 Output: *Randomly generated*  
 ![Let's go gambling!](./graphs/Gambling.png)

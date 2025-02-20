@@ -453,8 +453,8 @@ Add a line segment from `p1` to `p2`, whereas they are vectors representing `c(x
 `text(x, y, text, **kwargs)`  
 Add a piece of text into the graph with `x` & `y` coordinates.  
 
-`abline(a, b, **kwargs)` `abline(x = c, **kwargs)` `abline(y = d, **kwargs)`  
-Add a line which $y = a + bx$, $x = c$ & $y = d$ respectively.  
+`abline(a, b, **kwargs)` `abline(h = y, **kwargs)` `abline(v = x, **kwargs)`  
+Add a line which $y = a + bx$, $y = h$ & $x = v$ respectively.  
 *Note: Using `curve()` would make things easier in those curcumstances.*
 
 `polygon(x, y, **kwargs)`  
