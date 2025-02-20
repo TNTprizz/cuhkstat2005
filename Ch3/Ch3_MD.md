@@ -11,9 +11,13 @@ In the following examples, we will use the following source files:
 
 [popden1.dat](./popden1.dat)  
 [Commutating.dat](./Commutating.dat)  
+[iris.csv](./iris.csv)  
+[stock.dat](./stock.dat)
 ```R
 pop <- read.table("./popden1.dat", stringsAsFactors = TRUE, header = TRUE)
 com <- read.table("./Commutating.dat", stringsAsFactors = TRUE, header = TRUE)
+iris <- read.csv("./iris.csv")
+sto <- read.table("./stock.dat", stringsAsFactors = TRUE, header = TRUE)
 ```
 
 ## Multi-frame graphics
@@ -318,6 +322,10 @@ The variables can be in linear or non-linear relationship, positive or negative 
 
 `plot(xdata, ydata, **kwargs)`
 
+`pch` Integer. Stands for plotting character.  
+`bg` `vector[item]` Sets the colour of the dot.
+___
+
 For example, plotting the relationship between `lnpd86` and `lnpd90`:
 ```r
 plot(pop$lnpd86, pop$lnpd90, main = "Scatter plot with case numbers")
@@ -326,6 +334,176 @@ text(pop$lnpd86 - 0.1, pop$lnpd90 + 0.1, cex = 0.6)
 Output:  
 ![Scatter plot with case numbers](./graph/pdRegion8690Scat.png)
 
-### Identify different point with colours
+### Identify different point with colours or symbols
 
-*TNTprizz decided to go to sleep.*
+Based on different factor levels, we can set a unique colour or symbol for each of them.
+
+For example, making each colour represent each region for every point:
+```r
+plot(pop$lnpd86, pop$lnpd90, pch = 21,
+    bg = c("red", "green", "blue")[pop$Region]
+)
+```
+Output:  
+![Scatter plot with colours](./graph/pdRegion8690ScatCol.png)
+___
+Or, use the same symbol for the data which `year86 > year90`, and use another symbol otherwise.
+```r
+plot(pop$lnpd86, pop$lnpd90,
+    pch = c(21, 22)[(pop$year86 > pop$year90) + 1],
+    bg = c("red", "green", "blue")[pop$Region]
+)
+```
+Output:  
+![Scatter plot with colours and symbols](./graph/pdRegion8690ScatColSym.png)
+
+### Matrix Scatter Plot
+
+Let's say we want to compare all combinations possible in a set of data, matrix scatter plot would help in this case.
+
+`pairs(data, **kwargs)`  
+`**kwargs` is same as those in `plot()`.
+
+For instance, the famous iris dataset:
+```r
+pairs(iris[, 1:4],
+    pch = 21, bg = c("red", "green", "blue")[iris$Species]
+)
+```
+Output:  
+![iris](./graph/irisMatrixP.png)
+
+This compares all the properties 2 by 2 for analysis.
+
+## Time Series Plot
+
+`<- as.ts(data)`  
+Convert a sequence of vector to time series data. Do directly use it as `data` in `plot()`
+
+For instance, the stock prices of companies:  
+```r
+par(mfrow = c(3, 1))
+plot(as.ts(sto$HSBC))
+plot(as.ts(sto$CLP))
+plot(as.ts(sto$CK))
+```
+Output:  
+![Stock Time Series](./graph/stockts.png)
+
+### Plotting the data together
+
+We can get the graphs stick together by merging the data together:
+```r
+tgt <- cbind(as.ts(sto$HSBC), as.ts(sto$CLP), as.ts(sto$CK))
+plot(tgt)
+```
+Output:  
+![Sticked Stock Time Series](./graph/stocktsStick.png)  
+___
+Or, plotting them in the same chart:  
+`matplot(data, **kwargs)`  
+`**kwargs` is same as that in `plot()`
+```r
+matplot(tgt, type = "l")
+grid() # make a grid.
+```
+Output:  
+![Stock same Y axis](./graph/stocktsSChart.png)
+
+## Mathematics function plot
+
+A method is to get the corresponding x and y values in advance.
+
+For instance:
+```math
+y = x^3
+```
+
+```r
+x = seq(-5, 5, by = 0.01)
+y = x ^ 3
+plot(x, y, type = "l", ylim = c(-125, 125))
+```
+Output:  
+![y = x^3](./graph/yx3.png)
+___
+Or, using `curve()` function:
+
+`curve(formula, LM, UM)`  
+`formula` y = ???  
+`LM` `UM` Lower limit and Upper limit of x.
+
+```r
+curve(x ^ 3, -5, 5)
+```
+Output:  
+![y = x^3](./graph/yx3C.png)  
+*literally do the same thing.*
+
+# Low-Level Graphic Functions
+
+## Functions related:
+
+`points(x, y, **kwargs)`  
+Add a point into the graph with `x` & `y` coordinates.  
+
+`lines(p1, p2, **kwargs)`  
+Add a line segment from `p1` to `p2`, whereas they are vectors representing `c(x-coor, y-coor)`.
+
+`text(x, y, text, **kwargs)`  
+Add a piece of text into the graph with `x` & `y` coordinates.  
+
+`abline(a, b, **kwargs)` `abline(x = c, **kwargs)` `abline(y = d, **kwargs)`  
+Add a line which $y = a + bx$, $x = c$ & $y = d$ respectively.  
+*Note: Using `curve()` would make things easier in those curcumstances.*
+
+`polygon(x, y, **kwargs)`  
+Make a polygon with vectors `x` and `y`.  
+The coordinates of the points would be represented in the nth items in `x` and `y`.  
+For `x = c(0, 1, 2, 0)`, `y = c(0, 0, 1, 0)`, the coordinates of the points of the polygon would be `(0, 0)` `(1, 0)` `(2, 1)` & `(0, 0)`.
+
+`segments` `arrows` `(x0, y0, x1, y1, **kwargs)`  
+Make line segments and arrows from `(x0, y0)` to `(x1, y1)` respectively.  
+
+`symbols(x, y, *args, **kwargs)`  
+`*args`:  
+ - `circles` Set the radius of the circle.
+ - `squares` Set the length of the sides of the square.
+ - `rectangles` A matrix with 2 columns, set the width and the height of the rectangle respectively.
+ - etc. *Check the R help document yourselves. Won't be covered in exam.*
+
+`legend(x, y, legend, **kwargs)`  
+Put a legend on `x` & `y` coordinate.  
+`legend` `c(texts)[items]`
+
+## Labelling
+
+Refer to this image for the position of margins and lines:  
+![Properties position of a graph](./graph/propPos.png)
+
+`title(main, sub, x-lab, y-lab, **kwargs)`  
+Adds a title to a graph.  
+`main` Main title  
+`sub` Subtitle  
+`x-lab` `y-lab` titles for x-axis and y-axis.
+
+`mtext(text, side, line, **kwargs)`  
+Adds a text in a margin.  
+`side` `line` The side and line numbers. Refer to the image above.
+
+`axis(side, at, labels, **kwargs)`  
+Adds an axis to the graph.  
+`side` Refer to the image above.  
+`at` The point where the tick mark is shown.  
+`labels` The label of the axis.
+
+`box(**kwargs)`  
+Add a box to define the border of the plot.
+
+## `**kwargs` commonly used:  
+ - `pch` Set the symbols used in plotting.
+ - `col` Set the colour of the plot or line.
+    - `col.main` Set the colour of the title.
+    - `col.axis` Set the colour of the axis.
+ - `lwd` Set the width of the line.
+ - `lty` Set the style of the line.

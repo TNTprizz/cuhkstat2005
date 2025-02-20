@@ -9,13 +9,13 @@ Note that you should download the lecture notes from blackboard.
 ## View Directly
  - [Chapter 1 - Introduction to R](./Ch1/Ch1_MD.md)
  - [Chapter 2 - R: Data Processing](./Ch2/Ch2_MD.md)
- - [Chapter 3 - R: Data Visualization (Halfway there)](./Ch3/Ch3_MD.md)
+ - [Chapter 3 - R: Data Visualization](./Ch3/Ch3_MD.md)
  - Making......
 
 ## PDF
  - [Chapter 1 - Introduction to R](./Ch1/Ch1_MD.pdf)
  - [Chapter 2 - R: Data Processing](./Ch2/Ch2_MD.pdf)
- - [Chapter 3 - R: Data Visualization (Halfway there)](./Ch3/Ch3_MD.pdf)
+ - [Chapter 3 - R: Data Visualization](./Ch3/Ch3_MD.pdf)
  - Making......
 
 Note that the documents might have weird page breakings because of the PDF renderer.
@@ -29,8 +29,8 @@ Note that the documents might have weird page breakings because of the PDF rende
 
  - [x] Chapter 1
  - [x] Chapter 2
- - [ ] Chapter 3 --TBD
- - [ ] Chapter 4
+ - [x] Chapter 3
+ - [ ] Chapter 4 --TBD
  - [ ] Chapter 5
  - [ ] Chapter 6
  - [ ] Chapter 7
