@@ -32,8 +32,8 @@ Note that the documents might have weird page breakings because of the PDF rende
  - [x] Chapter 1
  - [x] Chapter 2
  - [x] Chapter 3
- - [ ] Chapter 4 --TBD
- - [ ] Chapter 5
+ - [x] Chapter 4
+ - [ ] Chapter 5 --TBD
  - [ ] Chapter 6
  - [ ] Chapter 7
  - [ ] Chapter 8
