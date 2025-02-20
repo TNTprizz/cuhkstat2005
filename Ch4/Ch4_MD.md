@@ -1,7 +1,7 @@
 # Chapter 4 Markdowns
 By @TNTprizz80315.  
 
-*Disclaimer: I assume that you've run through ENGG1100(C programming) before taking STAT2005, and you ought to have basic programming solving skills after that. I will only include the syntaxes involved without examples.*
+*Disclaimer: I assume that you've run through ENGG1110(C programming) before taking STAT2005, and you ought to have basic programming solving skills after that. I will only include the syntaxes involved without examples.*
 
 # Programming in R
 
@@ -25,7 +25,7 @@ Output:
 `return(x)` Self-explanatory.  
 *Do not use `return x` or an error will occur.*
 
-`warning(msg)` Printout a warning message `msg`.
+`warning(msg)` Print out a warning message `msg`.
 
 `stop(msg)` Throw out an error and terminate the program with message `msg`.
 
@@ -189,3 +189,5 @@ Output:
 ```
 NULL
 ```
+___
+*Note that `next` and `break` can be applied in any loop types.*
