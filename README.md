@@ -11,6 +11,7 @@ Note that you should download the lecture notes from blackboard.
  - [Chapter 2 - R: Data Processing](./Ch2/Ch2_MD.md)
  - [Chapter 3 - R: Data Visualization](./Ch3/Ch3_MD.md)
  - [Chapter 4 - R: Programming](./Ch4/Ch4_MD.md)
+ - [Chapter 5 - R: Programming (2)](./Ch5/Ch5_MD.md)
  - Making......
 
 ## PDF
@@ -18,6 +19,7 @@ Note that you should download the lecture notes from blackboard.
  - [Chapter 2 - R: Data Processing](./Ch2/Ch2_MD.pdf)
  - [Chapter 3 - R: Data Visualization](./Ch3/Ch3_MD.pdf)
  - [Chapter 4 - R: Programming](./Ch4/Ch4_MD.pdf)
+ - [Chapter 5 - R: Programming (2)](./Ch5/Ch5_MD.pdf)
  - Making......
 
 Note that the documents might have weird page breakings because of the PDF renderer.
@@ -33,7 +35,7 @@ Note that the documents might have weird page breakings because of the PDF rende
  - [x] Chapter 2
  - [x] Chapter 3
  - [x] Chapter 4
- - [ ] Chapter 5 --TBD
+ - [x] Chapter 5
  - [ ] Chapter 6
  - [ ] Chapter 7
  - [ ] Chapter 8
