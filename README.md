@@ -4,6 +4,8 @@ I generously made the below sources for your reference.
 
 Note that you should download the lecture notes from blackboard.
 
+Do open an issue if there is anything wrong. You may also do a PR if you want to amend something.
+
 # Menu
 
 ## View Directly
