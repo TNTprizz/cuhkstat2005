@@ -147,6 +147,6 @@ x <- y <- seq(-1, 1, by = 0.1)
 z <- outer(x, y, f)
 persp(x, y, z, theta = -30, phi = 30, col="lightblue", ticktype="detailed")
 ```
-Output:
+Output:  
 ![3Dnet](./graph/3dnet.png)
 ___
