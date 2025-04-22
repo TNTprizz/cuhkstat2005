@@ -29,6 +29,7 @@ Note that the documents might have weird page breakings because of the PDF rende
 # Appendix
 
  - [How to install R](./R_Installation/Binary.md)  
+ - [How to install SAS](./SAS_Installation/tut.md)
 
 
 # To-Do List
