@@ -14,7 +14,7 @@ Do open an issue if there is anything wrong. You may also do a PR if you want to
  - [Chapter 3 - R: Data Visualization](./Ch3/Ch3_MD.md)
  - [Chapter 4 - R: Programming](./Ch4/Ch4_MD.md)
  - [Chapter 5 - R: Programming (2)](./Ch5/Ch5_MD.md)
- - Making......
+ - [Chapter 6 - R: Scientific Computations](./Ch6/Ch6_MD.md)
 
 ## PDF
  - [Chapter 1 - Introduction to R](./Ch1/Ch1_MD.pdf)
@@ -22,7 +22,7 @@ Do open an issue if there is anything wrong. You may also do a PR if you want to
  - [Chapter 3 - R: Data Visualization](./Ch3/Ch3_MD.pdf)
  - [Chapter 4 - R: Programming](./Ch4/Ch4_MD.pdf)
  - [Chapter 5 - R: Programming (2)](./Ch5/Ch5_MD.pdf)
- - Making......
+ - [Chapter 6 - R: Scientific Computations](./Ch6/Ch6_MD.pdf)
 
 Note that the documents might have weird page breakings because of the PDF renderer.
 
@@ -38,7 +38,7 @@ Note that the documents might have weird page breakings because of the PDF rende
  - [x] Chapter 3
  - [x] Chapter 4
  - [x] Chapter 5
- - [ ] Chapter 6
+ - [x] Chapter 6
  - [ ] Chapter 7
  - [ ] Chapter 8
  - [ ] Chapter 9

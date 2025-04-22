@@ -200,3 +200,16 @@ Output:
  [1]       1       2       6      24     120     720    5040   40320  362880
 [10] 3628800
 ```
+
+## Vector Process
+
+By creating a formula with vector, you can do bulk operations without using loop.
+
+```R
+i <- 1:100
+sum((i**2 + i)/i**(1/2))
+```
+Output:
+```
+[1] 41172.69
+```
