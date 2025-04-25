@@ -22,7 +22,8 @@ It is not necessary to use indentations, but is recommended to do so.
 Statements can be in uppercase or lowercase.
 
 ### DATA steps
-`DATA` defines the data used and process the raw data.
+`DATA` defines the data used and process the raw data.  
+The step is run for each rows in the data.
 ```sas
 DATA set1;
     score = 114514;
